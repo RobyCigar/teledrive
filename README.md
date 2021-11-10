@@ -26,7 +26,7 @@ This is the open source project of Google Drive/OneDrive/iCloud/Dropbox alternat
    ```
 ## Installation
 
- - Define .env in `./server/.env` from `./server/.env-example` and `./web/.env` from `./web/.env-example`
+ - Create .env file in `./server/.env` from `./server/.env-example` 
 
    - Server variables
 
@@ -48,12 +48,20 @@ This is the open source project of Google Drive/OneDrive/iCloud/Dropbox alternat
       | PAYPAL_CLIENT_ID | yes | Client ID for PayPal subscription |
       | PAYPAL_CLIENT_SECRET | yes | Client secret for PayPal subscription |
       | PAYPAL_PLAN_PREMIUM_ID | yes | Product ID for premium plan |
-
+      
+ - Create .env file in `./web/.env` from `./web/.env-example`
    - Web variables
 
       | env | required | description |
       | --- | -------- | ----------- |
       | REACT_APP_API_URL | no | Base URL for the API, default: `''` (empty string)
+      
+ - Create .npmrc file and copy these lines then replace xxxx with your own GitHub personal token
+   
+   ```
+   //npm.pkg.github.com/:_authToken=xxxx
+   @mgilangjanuar:registry=https://npm.pkg.github.com/
+   ```
 
  - Install dependencies
 
